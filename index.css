@@ -1,0 +1,166 @@
+*{
+    padding: 0;
+    margin: 0;    
+}
+:root{
+    --body-bg: url('https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png');
+    --body-height:800;
+    --bdoy-width: 100vw;
+}
+body{
+    background-image: var(--body-bg);
+    background-position: fixed;
+    background-repeat: no-repeat;
+    width: var(--body-width);
+    height: var(--body-height);
+    display: grid;
+    grid-template-rows: 10vh 125vh 1fr;
+}
+nav{
+    grid-row: 1;
+    display: flex;
+    justify-content: flex-end;
+    max-height: 10vh;
+}
+nav .user-ico{
+    color:white;
+    font-size: 36px;
+    margin: 15px;
+}
+div.container
+{
+    grid-row: 2;
+    display: flex;
+    width: 100%;
+    min-height: 80vh;
+    max-height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+
+div.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+img.zomato-text{
+    color: white;
+    height: 60px;
+    margin: 40px;
+}
+h2.zomato-description{
+    display: inline;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+}
+
+div.body
+{
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+}
+div.body section.popular-locations{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+div.body section.popular-locations h1.popular-locations-text {
+    display: inline;
+    font-size: 2rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+}
+div.body section.popular-locations h1.india-text{
+    display: inline;
+    font-weight: 900;
+}
+div.body section.popular-locations img.indian-flag{
+    height: 36px;
+    margin: 0px 10px;
+}
+div.body section.popular-locations-description{
+    margin:  4% auto;
+    width: 70%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+div.body section.popular-locations-description p {
+    font-size: 20.5px;
+    font-family: 'Open Sans', sans-serif;
+    color: #696969;
+}
+
+div.body section.cities{
+    height: 480vh;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 20px;
+    grid-auto-rows: 60px;
+   
+}
+div.body section.cities div.card{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    border: 0.1px solid rgba(128, 128, 128, 0.21);
+    border-radius: 0.6rem;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 80% 10%;
+}
+
+div.body section.cities div.card span.citi-name {
+    font-size: 1.3rem;
+    font-family: 'Open Sans', sans-serif;
+    justify-self: start;
+    align-self: center;
+    margin-left: 30px;
+}
+div.body section.cities div.card span.arrow-box{
+  justify-self: flex-end;
+  align-self: center;
+}
+
+div.body section.cities div.card:hover{
+    box-shadow: 0px 1.42623px 2.85246px rgba(28, 28, 28, 0.08) ;
+}
+
+footer{
+    background-color: #f8f8f8;
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0%;
+}
+footer p {
+    text-align: center;
+}
+@media only screen and (max-width: 700px){
+    div.body section.cities{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    div.body section.cities{
+        grid-template-columns: 1fr;
+    }
+    div.body section.popular-locations h1.popular-locations-text{
+        font-size: 1.5rem;
+    }
+}
